@@ -1,0 +1,213 @@
+/*
+ * Global stylesheet for the Test Studio Inc. website.
+ *
+ * The palette and typography are deliberately restrained to echo
+ * the understated, editorial look seen in the reference designs. Feel free to
+ * adjust colours or fonts to better suit your own branding, but avoid
+ * introducing too many different typefaces or hues—simplicity is key.
+ */
+
+/* General resets */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #d7d4ce;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.nav-links a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* Hero section */
+.hero {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.hero h1 {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 4rem;
+    font-weight: normal;
+    letter-spacing: 2px;
+    color: #3c3c3c;
+}
+
+/* Gallery layout */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-auto-rows: 200px;
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    background-color: #f1f1ef;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-2px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item span {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #2d2d2d;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+}
+
+/* Modal overlay */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    z-index: 200;
+}
+
+.modal.active {
+    display: flex;
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    color: #333;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content label {
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    font-size: 0.9rem;
+    resize: vertical;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cancel-btn,
+.send-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #e9e9e9;
+    color: #333;
+    margin-right: 0.5rem;
+}
+
+.send-btn {
+    background-color: #111;
+    color: #fff;
+}
+
+.cancel-btn:hover {
+    background-color: #d8d8d8;
+}
+
+.send-btn:hover {
+    background-color: #333;
+}

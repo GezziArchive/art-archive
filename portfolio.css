@@ -1,0 +1,91 @@
+/*
+ * Stylesheet for the portfolio page. The design is inspired by
+ * understated, vertical portfolio sites with abundant white space. Each
+ * project occupies its own vertical space with a large image and a
+ * concise caption below. Adjust padding and margins to suit the length
+ * of your content.
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    background-color: #fafafa;
+    line-height: 1.4;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #e4e4e4;
+    background-color: #ffffff;
+}
+
+.left h1 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.left p {
+    margin: 0;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.right a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.right a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.project {
+    margin-bottom: 4rem;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    display: block;
+}
+
+.project p {
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.highlight {
+    color: #d86d00;
+    font-weight: 600;
+}
+
+.project a {
+    color: #0074d9;
+    text-decoration: none;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}

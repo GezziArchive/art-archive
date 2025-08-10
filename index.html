@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Studio Inc.</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Test Studio Inc.</div>
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <!-- When clicked, the contact link will show the modal defined below -->
+            <a href="#" id="contact-link">Contact</a>
+            <a href="#">Instagram</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero section with a centre‑aligned heading -->
+        <section class="hero">
+            <h1>LOREM&nbsp;IPSUM</h1>
+        </section>
+
+        <!-- Gallery section: replace the placeholder images with your own files -->
+        <section class="gallery">
+            <div class="gallery-item">
+                <img src="images/placeholder1.jpg" alt="Project 1" />
+                <span>Aenean&nbsp;Facili</span>
+            </div>
+            <div class="gallery-item">
+                <img src="images/placeholder2.jpg" alt="Project 2" />
+                <span>Mauris&nbsp;Lan</span>
+            </div>
+            <div class="gallery-item">
+                <img src="images/placeholder3.jpg" alt="Project 3" />
+                <span>Quisque&nbsp;Vita&nbsp;Est</span>
+            </div>
+            <div class="gallery-item">
+                <img src="images/placeholder4.jpg" alt="Project 4" />
+                <span>Vestibulum</span>
+            </div>
+            <div class="gallery-item">
+                <img src="images/placeholder5.jpg" alt="Project 5" />
+                <span>Donec</span>
+            </div>
+            <div class="gallery-item">
+                <img src="images/placeholder6.jpg" alt="Project 6" />
+                <span>Curabitur</span>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contact Modal overlay; hidden by default -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" aria-label="Close contact form">×</button>
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <label for="from-email">From:</label>
+                <input id="from-email" type="email" placeholder="enter your email address…" required />
+
+                <label for="message">Write your message:</label>
+                <textarea id="message" placeholder="Write your message…" rows="5" required></textarea>
+
+                <div class="button-row">
+                    <button type="button" class="cancel-btn">Cancel</button>
+                    <button type="submit" class="send-btn">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
